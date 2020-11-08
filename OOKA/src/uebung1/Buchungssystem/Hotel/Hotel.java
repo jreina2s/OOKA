@@ -1,10 +1,17 @@
 package uebung1.Buchungssystem.Hotel;
 
 public class Hotel {
+	private int id;
 	private String name;
 	private String city;
-	private String street;
-	private String zipCode;
+	private int stars;
+	private String contact;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -17,19 +24,18 @@ public class Hotel {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getStreet() {
-		return street;
+	public int getStars() {
+		return stars;
 	}
-	public void setStreet(String street) {
-		this.street = street;
+	public void setStars(int stars) {
+		this.stars = stars;
 	}
-	public String getZipCode() {
-		return zipCode;
+	public String getContact() {
+		return contact;
 	}
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
-	
 	
 	
 
