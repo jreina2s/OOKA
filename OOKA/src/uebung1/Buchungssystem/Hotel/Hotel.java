@@ -1,15 +1,28 @@
 package uebung1.Buchungssystem.Hotel;
 
 public class Hotel {
-	private int id;
+	private Integer id;
 	private String name;
 	private String city;
-	private int stars;
+	private Integer stars;
 	private String contact;
-	public int getId() {
+	
+	public Hotel(Integer id, String name, String city, Integer stars, String contact) {
+		setId(id);
+		setName(name);
+		setCity(city);
+		setStars(stars);
+		setContact(contact);
+	}
+	
+	public Hotel() {
+	}
+	
+	
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -24,10 +37,10 @@ public class Hotel {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public int getStars() {
+	public Integer getStars() {
 		return stars;
 	}
-	public void setStars(int stars) {
+	public void setStars(Integer stars) {
 		this.stars = stars;
 	}
 	public String getContact() {
@@ -38,5 +51,8 @@ public class Hotel {
 	}
 	
 	
-
+	@Override
+	public String toString() {
+		return "Hotel: " + name + "\n Ort: " + city; 
+	}
 }

@@ -39,10 +39,10 @@ public class DBAccess {
 		}
 	}
 
-	public List<Hotel> getObjects(int type, String value) {
+	public List<String> getObjects(int type, String value) {
 		Statement st;
 		ResultSet rs;
-		List<Hotel> result = new ArrayList<Hotel>();
+		List<String> result = new ArrayList<String>();
 		if (value.equals("*")) {
 			value = "";
 		}
@@ -51,10 +51,12 @@ public class DBAccess {
 			rs = st.executeQuery(
 					"SELECT * FROM buchungsystem.hotel WHERE buchungsystem.hotel.name ilike " + "\'%" + value + "%\'");
 			while (rs.next()) {
-				// System.out.println( "Hotel: " + rs.getString( "name" ) );
-//				    result.add( rs.getString( 1 ) );
-//				    result.add( rs.getString( 2 ) );
-//				    result.add( rs.getString( 3 ) );
+				System.out.println("Hotel: " + rs.getString("name"));
+				result.add(rs.getString(1));
+				result.add(rs.getString(2));
+				result.add(rs.getString(3));
+				result.add(rs.getString(4));
+				result.add(rs.getString(5));
 
 //				Attribute für die Klasse Hotel herrausfinden
 //				System.out.println(rs.getMetaData().getColumnName(1));
