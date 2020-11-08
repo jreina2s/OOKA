@@ -1,6 +1,7 @@
 package uebung1.Client;
 
-import uebung1.Buchungssystem.DBAccess;
+import java.util.List;
+
 import uebung1.Buchungssystem.HotelRetrieval;
 import uebung1.Buchungssystem.Hotel.Hotel;
 
@@ -12,7 +13,12 @@ public class Client {
 		retrieval.openSession();
 		
 		
-		Hotel[] hotels = retrieval.getHotelByName("*");
+		List<Hotel> hotels = retrieval.getHotelByName("*");
+		
+		for(Hotel h : hotels) {
+			System.out.println(h);
+			System.out.println("______________________________________________");
+		}
 		
 		retrieval.endSession();
 	}
