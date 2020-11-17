@@ -1,0 +1,11 @@
+Aufgabe1:
+
+
+Welche Aufgabe haben Ports im Kontext eines Komponentendiagramms? Recherchieren sie dieses Konzept anhand der Quelle von (Rupp, 2012), Kapitel 9.1.3 und
+9.4.3 (siehe Auszug in LEA, Ordner Literatur zu Kapitel 1)
+
+Ports fungieren als eine Art Briefkasten. Sie definieren die Interaktionspunkte zwischen einem entsprechenden Classifier und seiner Umgebung,
+oder auch zwischen dem Classifier und seinen inneren Komponenten.
+Ports werden als kleine Quadrate (Optimaler weise mit Name und Typ) auf der Kante eines Classifier Dargestellt.
+Ports ohne benennung sind immer einzigartigunterschiedlich.
+Ports können Iterfaces Entgegennehmen UND ODER implementieren.
