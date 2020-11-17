@@ -5,10 +5,10 @@ import java.util.List;
 
 import uebung1.Buchungssystem.Hotel.Hotel;
 
-public class HotelRetrieval implements IHotelSearch {
+public class HotelRetrieval implements IHotelSearch, IHotelAdvancedSearch {
 	private DBAccess db;
 
-	public HotelRetrieval() {
+	HotelRetrieval() {	//package private
 		db = new DBAccess();
 	}
 
@@ -44,7 +44,12 @@ public class HotelRetrieval implements IHotelSearch {
 		db.closeConnection();
 	}
 
-//	Wird nicht mehr gebraucht, da der Cache nun Singleton ist und über getInstance abgerufen werden kann!
+	@Override
+	public List<Hotel> getHotelBySomethingSpecial(String special) {
+		return getHotelByName(special);	//only for testing
+	}
+
+//	Wird nicht mehr gebraucht, da der Cache nun Singleton ist und ueber getInstance abgerufen werden kann!
 //	public void setCache(HotelCache cache) {
 //		this.cache = cache;
 //	}
